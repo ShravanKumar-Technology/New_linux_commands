@@ -101,6 +101,20 @@ git push origin master
 
 * A separate file called .gitignore has to be created and that file can be used to contain file names ( one file name per line ) which would to ignored from  adding to git repository. ex:- add *.log to ignore files with log extension. You have to commit .gitignore file.
 
+-------------------------------------
+ssh:
+
+1. create .ssh directory in home directory.
+
+2. ssh-keygen -t rsa -C "email@address or user.name"
+
+3. copy text inside id_rsa.pub and paste it in github ssh keystore.
+
+4.  ssh -T git@github.com --> type in this command to access ssh from terminal.
+
+if password is asked type in passprase earlyer asked 
+
+
 
 
 
