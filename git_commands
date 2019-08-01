@@ -6,31 +6,63 @@ git --version
 git config --global user.name "username"
 #enter username
 
-git congfig --global email "email@address.com"
+git congfig --global user.email "email@address.com"
 #enter email address
 
-git config --list
+git config --global --list
 # to get username and email and address.
 
+cat .gitconfig
+# to see inside the file .gitconfig.
+
+pwd
+#present working directory. 
+
+git init --directory-name--
+# Creates a new directory for project files which also acts as git repository.
+
+old-directory~$ git init
+# this command makes old-directory into git repository.
 
 git clone ---repository address--
 # to clone repository to local directory.
 
 git status
-# to get status of current directory
+# to get status of files in current directory, shows file that are recently modified.
 
-git add ---file---
-# adds file to commit.
+git add -filename-
+# adds file to staging area.
+
+git add .
+# git recursively adds any or all modified files to staging area.
+
+git reset HEAD -filename-
+# too unstage file from staging area.
+
+git checkout -- -filename-
+# to undo changes in directory. 
 
 git commit -m "comment"
-# adds comment and commit the file.
+# moves modified files from staging area to git repository.
+
+git commit -am "comment"
+# adds and commits modified file to git repository. 
 
 git push -u origin master
 # update the file to master directory.
 
+* A "commit" is a group of saved changes to git repository, impacts history, and is uniquly identified by sha1 hash.
+
+* Branch is timeline for commits, master is main branch and default branch.
+
+* Head is pointer to last commit.
 
 
 
+* working directory( init) ----> local staging area(add)---> git repository(commit)----> push ---> remote directory(github). 
+
+
+* git help # to get help.
 
 
 
