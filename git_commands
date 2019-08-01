@@ -79,6 +79,20 @@ git mv -file_name- -directory_name-
 * Head is pointer to last commit.
 
 
+git push -u origin master
+#pushesh all changes in file to remote repository. -u is used when first file is pushed.
+
+
+---------------------------------------
+good practice.
+
+git pull origin master
+* it is good practice to pull and merge remote repository and checking for any changes before pushing your update.
+
+git push origin master
+* too update any changes made by you to remote repository.
+---------------------------------------
+
 
 * working directory( init) ----> local staging area(add)---> git repository(commit)----> push ---> remote directory(github). 
 
