@@ -51,6 +51,27 @@ git commit -am "comment"
 git push -u origin master
 # update the file to master directory.
 
+git log
+# to show log or when files where add to git repository.
+
+git help log
+# to show options for git log.
+
+git log --oneline --graph --decorate --color
+# example to git log command.
+
+git rm -filename-
+# to remove file from git repository. you have to commit changes after this command to make removal permenant.
+
+mkdir -new_directory_name-
+# creates new directory name.
+
+git mv -file_name- -directory_name-
+# moves file to directory specfied. after this command you have to commit to make changes permenant.
+
+
+
+
 * A "commit" is a group of saved changes to git repository, impacts history, and is uniquly identified by sha1 hash.
 
 * Branch is timeline for commits, master is main branch and default branch.
@@ -64,6 +85,7 @@ git push -u origin master
 
 * git help # to get help.
 
+* A separate file called .gitignore has to be created and that file can be used to contain file names ( one file name per line ) which would to ignored from  adding to git repository. ex:- add *.log to ignore files with log extension. You have to commit .gitignore file.
 
 
 
