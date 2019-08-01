@@ -1,0 +1,40 @@
+sudo apt-get install git
+#to install git.
+
+git --version 
+
+git config --global user.name "username"
+#enter username
+
+git congfig --global email "email@address.com"
+#enter email address
+
+git config --list
+# to get username and email and address.
+
+
+git clone ---repository address--
+# to clone repository to local directory.
+
+git status
+# to get status of current directory
+
+git add ---file---
+# adds file to commit.
+
+git commit -m "comment"
+# adds comment and commit the file.
+
+git push -u origin master
+# update the file to master directory.
+
+
+
+
+
+
+
+
+
+
+
