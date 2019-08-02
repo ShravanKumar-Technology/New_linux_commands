@@ -160,11 +160,39 @@ git diff --color-words -filename-
 
 ------------------------------------
 ------------------------------------
+
 pager:
 
 f ---> move forward.
 b ---> move backward.
 minus+shift+s+return ---> to fold lines in pager.
+
+------------------------------------
+------------------------------------
+
+undo changes in directory:
+
+git checkout -filename- or git checkout -- -filename-      (two dashes with space is requied here).
+# this undo's the changes in working directory. second command commands it be in current branch.
+
+git reset HEAD -filename-
+# it unstages the file from staging index. but doesn't change the changes made in working directory.
+
+-------------------------
+undoing changes in repository itself:
+
+we can't undo changes in repostiory, but we can undo changes in last commit.by using "amend" command.
+git commit --amend -m "message"            ----> changes message in last commit. here commit was already done.
+
+  
+
+
+
+ 
+
+
+
+
 
 
 
