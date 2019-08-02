@@ -29,7 +29,8 @@ git clone ---repository address--
 
 git status
 # to get status of files in current directory, shows file that are recently modified.
-
+its going to tell status between those three different trees.
+ 
 git add -filename-
 # adds file to staging area.
 
@@ -46,11 +47,11 @@ git commit -m "comment"
 # moves modified files from staging area to git repository.
 
 git commit -am "comment"
-# adds and commits modified file to git repository. 
+# adds and commits at the same time. 
 
 git push -u origin master
 # update the file to master directory.
-
+-------------------------------------------
 git log
 # to show log or when files where add to git repository.
 
@@ -60,14 +61,36 @@ git help log
 git log --oneline --graph --decorate --color
 # example to git log command.
 
+git log -n 1
+# it limits the number of logs shown. here it only shows 1 commit.
+
+git log --since=2019-12-10
+# it shows commit made from date specified.
+
+git log --until=2019-12-11
+# it shows commit made until date specified.
+
+git log --author="joe"
+# it shows commits made by specific author, you can use part of the name too.
+
+git log --grep="Init"
+# it searchs for regular expression specified. 
+
+-------------------------------------------
+
 git rm -filename-
 # to remove file from git repository. you have to commit changes after this command to make removal permenant.
+it also moves deleted file process to staging area.
 
 mkdir -new_directory_name-
 # creates new directory name.
 
 git mv -file_name- -directory_name-
 # moves file to directory specfied. after this command you have to commit to make changes permenant.
+
+
+git mv -filename- -renamedfile_name-
+# renames file name and moves to staging area, you have to commit after this.
 
 
 
@@ -114,7 +137,34 @@ ssh:
 
 if password is asked type in passprase earlyer asked 
 
+------------------------------------
 
+three different direcotries or trees , working directory, staging directory, and repository.
+
+------------------------------------
+
+git diff
+# shows the changes made to the old file, it show difference between old and new version of same file.
+it show this info on files in working directory.
+
+git diff -filename-
+# shows the difference between old and new version of the file of file name specified.
+
+git diff --staged
+# shows info on files in staged index. show diff in old and new version in same file.
+
+git diff --color-words -filename-
+# shows info in different way.
+
+
+
+------------------------------------
+------------------------------------
+pager:
+
+f ---> move forward.
+b ---> move backward.
+minus+shift+s+return ---> to fold lines in pager.
 
 
 
