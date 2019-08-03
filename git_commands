@@ -118,6 +118,15 @@ git log --oneline --graph --decorate
 git show sha1
 # it shows what changed in given commit.
 
+git show --format=oneline HEAD
+git show --format=oneline HEAD^
+git show --format=oneline HEAD^^
+git show --format=oneline HEAD~3
+git help show
+#these are used to navigate around commits.
+
+git show filename  ---> this command will not work, you have to pass some other reference to commit. like sha1.
+
 -------------------------------------------
 
 git rm -filename-
