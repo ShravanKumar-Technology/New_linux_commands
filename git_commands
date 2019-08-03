@@ -58,6 +58,14 @@ git log
 git help log
 # to show options for git log.
 
+git log --oneline
+# it compresses log in one line list.
+
+
+git log --oneline -3
+# it compresses log in one line list. it shows only three commits.
+
+
 git log --oneline --graph --decorate --color
 # example to git log command.
 
@@ -75,6 +83,40 @@ git log --author="joe"
 
 git log --grep="Init"
 # it searchs for regular expression specified. 
+
+git log -p
+# show diff in commits. it is patch option.
+
+git log --stat --summary
+# it will show statstics in what changed in each commit.
+
+git log --format=oneline
+# it shows full sha1 and commits.
+
+git log --format=short
+# it shows short sha1 and commits.
+
+git log --format=full
+# it shows full sha1 and commits.
+
+git log --format=fuller
+# it shows more info on sha1 and commits.
+
+
+git log --format=email
+# it shows full sha1 and commits in email format.
+
+git log --format=raw
+# it shows full sha1 and commits.
+
+git log --graph
+# it shows graph commit.
+
+git log --oneline --graph --decorate
+#show log info 
+
+git show sha1
+# it shows what changed in given commit.
 
 -------------------------------------------
 
@@ -184,7 +226,21 @@ undoing changes in repository itself:
 we can't undo changes in repostiory, but we can undo changes in last commit.by using "amend" command.
 git commit --amend -m "message"            ----> changes message in last commit. here commit was already done.
 
-  
+-------------------------
+blob is a file, tree is directory.
+
+git ls-tree HEAD
+*here HEAD is tree-ish, it will refer to the tip of the currently checked-out branch.
+
+git ls-tree master^ directory-name 
+*gives directory previous state.
+
+tree-ish ---> part of tree, like a tree.---> tree-ish is a reference to a commit  
+
+git ls-tree sha1-number
+*give info on commit with given sha1 value.
+
+
 
 
 
