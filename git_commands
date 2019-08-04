@@ -207,8 +207,30 @@ git diff --staged
 git diff --color-words -filename-
 # shows info in different way.
 
+git diff sha1
+# shows changes made on that perticular commit.
+
+git diff sha1 filename
+# shows changes made on that perticular commit on particular file.
+
+git diff sha1_of_commit..sha1_of_diff_commit
+#shows what changed between two different commits. things changed between two different snapshots.
+
+git diff sha1_of_commit..sha1_of_diff_commit filename
+#shows what changed between two different commits on particular file name. things changed between two different snapshots.
+
+git diff --stat --summary sha1_of_commit..HEAD filename
+#shows what changed between two different commits on particular file name. things changed between two different snapshots.
+
+git diff --ignore-space-change sha1_of_commit..HEAD
+#ignore space change.
 
 
+git diff --ignore-all-space sha1_of_commit..HEAD
+#ignore space change.
+
+git diff -w sha1_of_commit..HEAD
+#ignore all space change. we can also use -b.
 ------------------------------------
 ------------------------------------
 
@@ -248,6 +270,64 @@ tree-ish ---> part of tree, like a tree.---> tree-ish is a reference to a commit
 
 git ls-tree sha1-number
 *give info on commit with given sha1 value.
+
+-------------------------
+=========================
+
+#how to create branch
+
+git branch
+# shows how many branches are there in local machine.
+
+git branch branch_name
+# creates a new branch, you are still in master branch, you have not switched to new branch.
+
+git checkout branch_name
+# switches to new branch.
+
+git checkout master
+# switches back to branch master.   
+
+## fast context switching.
+
+git checkout -b new_branch_name
+# creates a new branch and switches to that branch.
+
+## your working directory must be clean in order to switch from current branch to another branch.
+## your working directory must be mostly clean or have no conflicts to switch from current branch to another branch.
+
+git diff master..new_branch
+# difference between master and new_branch snapshots.
+# the order of these doesn't matter, you can swap them easily.
+
+git diff --color-words master..new_branch
+# difference between master and new_branch snapshots. shows what changed between different commits.
+
+git diff --color-words master..new_branch^
+# difference between master and new_branch's parent snapshots. shows what changed between different commits.
+# this command is tree-ish.
+
+git branch --merged 
+# show all the branch's completely included in current branch.
+
+git branch -m new_branch new_name_of_branch
+# renaming of branch. -m here is move. in git move is also renaming.
+
+git branch -d branch_name_tobe_deleted
+# this command deletes a branch. you can't delete a branch you are currently in. you can use -D option to delete commited branch.
+
+git merge branch_name
+# this command adds branch to master branch. you have to do it from being on master branch.
+
+## always have clean working space 
+
+git branch --merged 
+# gives info on branches merged.
+
+
+
+
+
 
 
 
