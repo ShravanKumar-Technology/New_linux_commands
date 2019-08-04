@@ -324,7 +324,7 @@ git merge branch_name
 git branch --merged 
 # gives info on branches merged.
 
-
+git merge --no-ff branch_name 
 
 
 
