@@ -324,7 +324,64 @@ git merge branch_name
 git branch --merged 
 # gives info on branches merged.
 
-git merge --no-ff branch_name 
+git merge --no-ff branch_name
+# no fast forward merge.
+
+git stash save "log message to be displayed"
+# it doesn't commit any changes made, it puts changes made in fourth place away from staging area and working space.
+it doesn't genarate sha1 for this.
+
+git stash list
+# shows saved stashes
+
+git stash show -p stash_no
+# it similar to showing a commit, it displays typical changes made.
+
+git stash apply  (or)  git stash pop
+# it retives changes saved in stash. here pop pulls off saved state from stash without saving a copy in stash.
+
+git stash drop stash_no
+# it deletes saved snapshot from stash.
+
+git stash clear
+# it deletes whole contents in stash.
+
+--------------------------------------
+
+git remote
+# shows remote branch.
+
+git remote -v
+# shows list of remote branch.
+
+git branch -r
+# shows remote branch.
+
+git branch -a
+# shows both remote branch and local branch.
+
+git clone project_url
+# to clone a project into local directory.
+
+git clone project_url projectDirectory_youNamed
+# to clone a project into local directory, which you have named your self.
+
+git push -u origin master
+# track branch in remote repository. with out option -u the command will just push changes to remote
+directory.
+
+git push
+# to push project in to remote directory.
+
+git fetch origin
+# makes local repository in sync with remote repository.
+
+fetch before you work
+fetch before you push
+fetch often 
+
+
+
 
 
 
